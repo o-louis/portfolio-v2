@@ -13,7 +13,7 @@
       <ul :class="{ 'nav-container': true, open: isNavOpen }">
         <font-awesome-icon :icon="['fa', 'times']" @click="toggleNav" />
         <li v-for="(section, index) in nav" :key="index" class="nav__link">
-          <a :href="section.path">{{ section.name }}</a>
+          <a :href="section.path" target="__blank">{{ section.name }}</a>
         </li>
 
         <Contact />
@@ -23,7 +23,9 @@
 </template>
 
 <script>
+import resume from '../static/Oriane_Louis_Resume.pdf'
 import Contact from './Contact'
+
 export default {
   name: 'Header',
   components: {
@@ -36,7 +38,7 @@ export default {
       { name: 'Skills', path: '#skills' },
       { name: 'Projects', path: '#projects' },
       { name: 'Contact', path: '#contact' },
-      { name: 'Resume', path: '#' },
+      { name: 'Resume', path: resume },
     ],
     isNavOpen: false,
   }),

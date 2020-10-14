@@ -32,7 +32,7 @@
                   v-if="project.links.other"
                   :href="project.links.other"
                   target="__blank"
-                  >Source</a
+                  >ReactJS</a
                 >
               </span>
             </p>
@@ -121,7 +121,7 @@ export default {
         desc: 'Search and consult Movie details<br><strong>Vue.js</strong><br>',
         links: {
           view: 'https://vueflixx.netlify.app/',
-          source: 'https://github.com/o-louis/authentication',
+          source: 'https://github.com/o-louis/movie-vuejs',
           other: 'https://github.com/o-louis/movie-app',
         },
       },

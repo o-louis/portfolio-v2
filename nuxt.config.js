@@ -38,5 +38,15 @@ export default {
   modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extend(config) {
+      // Find the rule which contains a assets file extension
+      const assetsLoader = config.module.rules.find(rule => rule.test.test('.png'));
+
+      // Overwrite the test regex and add `pdf`
+      assetsLoader.test = /\.(png|jpe?g|gif|svg|webp|pdf)$/i;
+
+      return config;
+    },
+  },
 }
