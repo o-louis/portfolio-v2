@@ -38,6 +38,214 @@ export default {
 </script>
 
 <style>
-@import '../assets/global.css';
-@import '../assets/mediaqueries.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+  /* color */
+  --black: #0a192f; /* #0D1219;*/
+  --white: #fff;
+  --light-grey: #e5e5e5;
+  --lightest-grey: #dcd6d62f;
+  --darkest-grey: rgba(255, 255, 255, 0.13);
+  --dark-grey: #a8a8a8;
+  --purple: #4831d4;
+  --dark-purple: #3d155f;
+  --darkest-purple: #372c7d;
+  --blue-purple: #a09be7;
+  --hamburger: rgba(196, 196, 196, 0.12);
+
+  /* font-sizes */
+  --fs-vw: 0rem;
+  --fs-logo: calc(3rem + var(--fs-vw));
+  --fs-h1: calc(4.25rem + var(--fs-vw));
+  --fs-h2: calc(3.85rem + var(--fs-vw));
+  --fs-h3: calc(2.85rem + var(--fs-vw));
+  --fs-h4: calc(2rem + var(--fs-vw));
+  --fs-p-normal: calc(1.8rem + var(--fs-vw));
+  --fs-p-small: calc(1.35rem + var(--fs-vw));
+  --fs-p-smallest: calc(1.15rem + var(--fs-vw));
+  --fs-p-desc: calc(1.4rem + var(--fs-vw));
+
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+
+  /* z-index */
+  --high: 10;
+  --medium: 5;
+  --low: 1;
+  --null: -1;
+
+  /* font-weight */
+  --extra-bold: 900;
+  --bold: 700;
+  --regular: 400;
+  --light: 300;
+
+  /* container */
+  --width-container: 85%;
+  --max-width-container: 1000px;
+
+  /* others */
+  --lh: 150%;
+  --vw: calc(100vh - 64px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button,
+input {
+  border: none;
+}
+
+a {
+  color: inherit;
+}
+
+section {
+  padding-top: 68px;
+}
+
+body {
+  background-color: #31267a52;
+  background-color: var(--black);
+  background-color: #1d164c;
+}
+
+@media (min-width: 480px) {
+  .skills__grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .intro__content p {
+    font-size: var(--fz-xl);
+  }
+  .about__content p {
+    font-weight: var(--medium);
+    font-size: var(--fz-xl);
+  }
+  .experiences__missions,
+  .skills__item {
+    font-size: var(--fz-lg);
+  }
+  .projects__grid {
+    grid-auto-rows: auto;
+  }
+}
+
+@media (min-width: 616px) {
+  :root {
+    --fs-vw: 0.5rem;
+  }
+  .projects__description h4 {
+    font-size: 2rem;
+  }
+  .projects__description p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    transform: translateX(0);
+  }
+  .nav__hamburger {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+  }
+  nav ul {
+    position: relative;
+    width: 40%;
+    height: inherit;
+    z-index: var(--high);
+    background-color: inherit;
+    color: white;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__link {
+    width: auto;
+    height: auto;
+    padding-right: 30px;
+    margin-bottom: 0px;
+
+    color: var(--blue-purple);
+  }
+  .nav__link:hover {
+    color: var(--white);
+  }
+  .nav__link:nth-child(6):hover {
+    background-color: var(--white);
+    color: var(--purple);
+  }
+  .nav__link:nth-child(6) {
+    width: 100%;
+    border: 1px solid var(--white);
+    color: white;
+  }
+  .fa-times {
+    display: none !important;
+  }
+  .nav-container .contact__content {
+    display: none;
+  }
+}
+
+@media (min-width: 923px) {
+  :root {
+    --fs-vw: 0.4rem;
+  }
+  .about,
+  projects {
+    min-height: 100vh;
+  }
+  .intro__content h2 {
+    font-size: 5rem;
+  }
+  .intro__content h1 {
+    font-size: 6rem;
+  }
+  .intro__content h3 {
+    font-size: 6.5rem;
+  }
+  .intro__content p {
+    font-size: 2.2rem;
+  }
+  .intro__content p {
+    max-width: 800px;
+  }
+  .projects__grid {
+    grid-auto-rows: minmax(190px, 120px);
+  }
+}
 </style>

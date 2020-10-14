@@ -96,3 +96,113 @@ body {
   background-color: var(--black);
   background-color: #1d164c;
 }
+
+@media (min-width: 480px) {
+  .skills__grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .intro__content p {
+      font-size: var(--fz-xl);
+  }
+  .about__content p {
+      font-weight: var(--medium);
+      font-size: var(--fz-xl);
+  }
+  .experiences__missions, .skills__item {
+      font-size: var(--fz-lg);
+  }
+  .projects__grid {
+      grid-auto-rows: auto;
+  }
+}
+
+@media (min-width: 616px) {
+  :root {
+      --fs-vw: 0.5rem;
+  }
+  .projects__description h4 {
+      font-size: 2rem;
+  }
+  .projects__description p {
+      font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+      transform: translateX(0);
+  }
+  .nav__hamburger {
+      display: none;
+  }
+  .nav-container {
+      display: flex;
+  }
+  nav ul {
+      position: relative;
+      width: 40%;
+      height: inherit;
+      z-index: var(--high);
+      background-color: inherit;
+      color: white;
+      padding: 0px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+  .nav__link {
+      width: auto;
+      height: auto;
+      padding-right: 30px;
+      margin-bottom: 0px;
+
+      color: var(--blue-purple);
+  }
+  .nav__link:hover {
+      color: var(--white);
+  }
+  .nav__link:nth-child(6):hover {
+      background-color: var(--white);
+      color: var(--purple);
+  }
+  .nav__link:nth-child(6) {
+      width: 100%;
+      border: 1px solid var(--white);
+      color: white;
+  }
+  .fa-times {
+      display: none !important;
+  }
+  .nav-container .contact__content {
+      display: none;
+  }
+}
+
+@media (min-width: 923px) {
+  :root {
+      --fs-vw: 0.4rem;
+  }
+  .about, projects {
+      min-height: 100vh;
+  }
+  .intro__content h2 {
+      font-size: 5rem;
+  }
+  .intro__content h1 {
+      font-size: 6rem;
+  }
+  .intro__content h3 {
+      font-size: 6.5rem;
+  }
+  .intro__content p {
+      font-size: 2.2rem;
+  }
+  .intro__content p {
+      max-width: 800px;
+  }
+  .projects__grid {
+      grid-auto-rows: minmax(190px, 120px);
+  }
+}
