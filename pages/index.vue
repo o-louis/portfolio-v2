@@ -1,63 +1,43 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio-v2</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <Header />
+    <main>
+      <Intro />
+      <About />
+      <Skills />
+      <Projects />
+      <section id="contact" class="contact">
+        <Contact />
+      </section>
+      <Footer />
+    </main>
   </div>
 </template>
 
 <script>
-export default {}
+import Header from '../components/Header'
+import Intro from '../layouts/Intro'
+import About from '../layouts/About'
+import Skills from '../layouts/Skills'
+import Projects from '../layouts/Projects'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
+
+export default {
+  name: 'Index',
+  components: {
+    Header,
+    Intro,
+    About,
+    Skills,
+    Projects,
+    Contact,
+    Footer,
+  },
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+@import '../assets/global.css';
+@import '../assets/mediaqueries.css';
 </style>
