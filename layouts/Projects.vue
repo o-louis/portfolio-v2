@@ -14,7 +14,11 @@
           <div class="projects__description">
             <h4>{{ project.title }}</h4>
             <p>
-              <span v-html="project.desc"></span>
+              {{ project.desc }}
+              <br />
+              <strong>{{ project.languages }}</strong>
+              <br />
+              {{ project.option }}
               <span v-if="project.links" class="projects__link">
                 <a
                   v-if="project.links.view"
@@ -62,22 +66,25 @@ export default {
         title: 'Starzplay',
         img: starzplay,
         alt: 'starzplay',
-        desc:
-          'Official Starzplay app<br /><strong>Javascript, jQuery, MVC</strong><br/>Confidential source',
+        desc: 'Official Starzplay app',
+        languages: 'Javascript, jQuery, MVC',
+        option: 'Confidential source',
       },
       {
         title: 'ARTE',
         img: arte,
         alt: 'arte',
-        desc:
-          'Official ARTE for HbbTV, Orange STBs and freebox<br><strong>Javascript, MVC</strong><br>Confidential source',
+        desc: 'Official ARTE for HbbTV, Orange STBs and freebox',
+        languages: 'Javascript, MVC',
+        option: 'Confidential source',
       },
       {
         title: 'Bloggie',
         img: mernblog,
         alt: 'mernblog',
-        desc:
-          'Blog with CRUD actions<br><strong>MERN stack: Reactjs, Node.js</strong><br>',
+        desc: 'Blog with CRUD actions',
+        languages: 'MERN stack: Reactjs, Node.js',
+        option: '',
         links: {
           view: 'https://bloggie.netlify.app',
           source: 'https://github.com/o-louis/',
@@ -87,7 +94,9 @@ export default {
         title: 'Covid Tracker 19',
         img: covidtracker,
         alt: 'covidtracker',
-        desc: 'Tracker of the Covid-19<br><strong>Reactjs</strong><br>',
+        desc: 'Tracker of the Covid-19',
+        languages: 'Reactjs',
+        option: '',
         links: {
           view: 'https://covid-trackerv2.netlify.app/',
           source: 'https://github.com/o-louis/covid-tracker-v2',
@@ -97,8 +106,9 @@ export default {
         title: 'Chat application',
         img: chatapp,
         alt: 'chatapp',
-        desc:
-          'Create or join a room<br><strong>Reactjs, Express, SocketIO</strong><br>',
+        desc: 'Create or join a room',
+        languages: 'Reactjs, Express, SocketIO',
+        option: '',
         links: {
           view: 'https://reachatt.netlify.app',
           source: 'https://github.com/o-louis/chat-app',
@@ -108,8 +118,9 @@ export default {
         title: 'Authentication',
         img: authentication,
         alt: 'authentication',
-        desc:
-          'Backend authentication<br><strong>Node.js, JwT and ejs</strong><br>',
+        desc: 'Backend authentication',
+        languages: 'Node.js, JwT and ejs',
+        option: '',
         links: {
           source: 'https://github.com/o-louis/authentication',
         },
@@ -118,7 +129,9 @@ export default {
         title: 'Movie application',
         img: moovee,
         alt: 'movieapp',
-        desc: 'Search and consult Movie details<br><strong>Vue.js</strong><br>',
+        desc: 'Search and consult Movie details',
+        languages: 'Vue.js',
+        option: '',
         links: {
           view: 'https://vueflixx.netlify.app/',
           source: 'https://github.com/o-louis/movie-vuejs',
@@ -129,7 +142,9 @@ export default {
         title: 'Hacker News',
         img: hackernews,
         alt: 'hackernews',
-        desc: 'Hacker news client<br><strong>Vue.js</strong><br>',
+        desc: 'Hacker news client',
+        languages: 'Vue.js',
+        option: '',
         links: {
           view: 'https://hackernews-v1.netlify.app',
           source: 'https://github.com/o-louis/hacker-news',
@@ -142,7 +157,8 @@ export default {
 
 <style>
 .projects {
-  padding-bottom: 36px;
+  margin-top: 10px;
+  padding-bottom: 20px;
   color: var(--white);
 }
 
@@ -257,9 +273,6 @@ export default {
   }
 }
 @media (min-width: 923px) {
-  .projects {
-    min-height: 100vh;
-  }
   .projects__grid {
     grid-auto-rows: minmax(190px, 120px);
   }
