@@ -42,33 +42,22 @@ export default {
 
 :root {
   /* color */
-  --black: #0a192f; /* #0D1219;*/
+  --background: #1d164c;
+  --black: #0a192f;
   --white: #fff;
-  --light-grey: #e5e5e5;
   --lightest-grey: #dcd6d62f;
-  --darkest-grey: rgba(255, 255, 255, 0.13);
-  --dark-grey: #a8a8a8;
   --purple: #4831d4;
-  --dark-purple: #3d155f;
-  --darkest-purple: #372c7d;
   --blue-purple: #a09be7;
-  --hamburger: rgba(196, 196, 196, 0.12);
 
   /* font-sizes */
   --fs-vw: 0rem;
   --fs-logo: calc(3rem + var(--fs-vw));
-  --fs-h1: calc(4.25rem + var(--fs-vw));
-  --fs-h2: calc(3.85rem + var(--fs-vw));
   --fs-h3: calc(2.85rem + var(--fs-vw));
   --fs-h4: calc(2rem + var(--fs-vw));
   --fs-p-normal: calc(1.8rem + var(--fs-vw));
   --fs-p-small: calc(1.35rem + var(--fs-vw));
   --fs-p-smallest: calc(1.15rem + var(--fs-vw));
   --fs-p-desc: calc(1.4rem + var(--fs-vw));
-
-  --fz-xxs: 12px;
-  --fz-xs: 13px;
-  --fz-sm: 14px;
   --fz-md: 16px;
   --fz-lg: 18px;
   --fz-xl: 20px;
@@ -93,7 +82,6 @@ export default {
 
   /* others */
   --lh: 150%;
-  --vw: calc(100vh - 64px);
 }
 
 * {
@@ -132,9 +120,7 @@ section {
 }
 
 body {
-  background-color: #31267a52;
-  background-color: var(--black);
-  background-color: #1d164c;
+  background-color: var(--background);
 }
 
 @media (min-width: 616px) {
