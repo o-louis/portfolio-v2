@@ -3,14 +3,13 @@
     <div class="contact__social">
       <div class="contact__networks">
         <a
-          v-for="(link, index) in contact"
+          v-for="(link, index) in contacts"
           :key="index"
           :href="link.path"
           target="__blank"
         >
-          <font-awesome-icon :icon="[link.icon.prefix, link.icon.name]" />
-          <i :class="link.icon"></i
-        ></a>
+          <font-awesome-icon :icon="[link.icon.prefix, link.icon.name]"
+        /></a>
       </div>
     </div>
   </div>
@@ -20,7 +19,7 @@
 export default {
   name: 'Contact',
   data: () => ({
-    contact: [
+    contacts: [
       {
         path: 'https://www.linkedin.com/in/oriane-louis/',
         icon: { prefix: 'fab', name: 'linkedin' },
