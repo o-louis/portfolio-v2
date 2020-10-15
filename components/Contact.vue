@@ -1,18 +1,20 @@
 <template>
-  <div class="contact__content">
-    <div class="contact__social">
-      <div class="contact__networks">
-        <a
-          v-for="(link, index) in contacts"
-          :key="index"
-          :href="link.path"
-          target="__blank"
-        >
-          <font-awesome-icon :icon="[link.icon.prefix, link.icon.name]"
-        /></a>
+  <section id="contact" class="contact">
+    <div class="contact__content">
+      <div class="contact__social">
+        <div class="contact__networks">
+          <a
+            v-for="(link, index) in contacts"
+            :key="index"
+            :href="link.path"
+            target="__blank"
+          >
+            <font-awesome-icon :icon="[link.icon.prefix, link.icon.name]"
+          /></a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -43,6 +45,10 @@ export default {
 
 <style>
 /* For the navigation place */
+.nav-container .contact {
+  padding-top: 0;
+  color: var(--purple);
+}
 .nav-container .contact__social {
   text-align: center;
 }
@@ -51,7 +57,7 @@ export default {
 }
 
 .nav-container .contact__networks {
-  font-size: var(--fz-xxl);
+  font-size: 30px;
 }
 
 /* For the section */

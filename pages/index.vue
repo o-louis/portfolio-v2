@@ -6,9 +6,7 @@
       <About />
       <Skills />
       <Projects />
-      <section id="contact" class="contact">
-        <Contact />
-      </section>
+      <Contact />
       <Footer />
     </main>
   </div>
