@@ -13,7 +13,9 @@
       <ul :class="{ 'nav-container': true, open: isNavOpen }">
         <font-awesome-icon :icon="['fa', 'times']" @click="toggleNav" />
         <li v-for="(section, index) in nav" :key="index" class="nav__link">
-          <a :href="section.path" target="__blank">{{ section.name }}</a>
+          <a :href="section.path" :target="section.target">{{
+            section.name
+          }}</a>
         </li>
 
         <Contact />
@@ -38,10 +40,22 @@ export default {
       { name: 'Skills', path: '#skills' },
       { name: 'Projects', path: '#projects' },
       { name: 'Contact', path: '#contact' },
-      { name: 'Resume', path: resume },
+      { name: 'Resume', path: resume, target: true },
     ],
     isNavOpen: false,
   }),
+  mounted() {
+    let prevScrollpos = window.pageYOffset
+    window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset
+      if (prevScrollpos > currentScrollPos) {
+        document.querySelector('header').style.top = '0'
+      } else {
+        document.querySelector('header').style.top = '-67px'
+      }
+      prevScrollpos = currentScrollPos
+    }
+  },
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen
@@ -54,12 +68,15 @@ export default {
 <style>
 header {
   width: 100%;
-  padding: 8px 0;
+  padding: 14px 0;
   position: fixed;
   top: 0;
   z-index: var(--high);
   color: var(--blue-purple);
   background-color: var(--purple);
+
+  transition: top 0.4s ease;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
 }
 
 nav {
