@@ -54,7 +54,6 @@ export default {
 
 <style>
 .skills {
-  padding-bottom: 125px;
   color: var(--white);
 }
 
