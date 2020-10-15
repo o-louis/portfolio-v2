@@ -31,7 +31,6 @@ export default {
 .about {
   width: 100%;
   position: relative;
-  padding-bottom: 50px;
 }
 
 .about__content {
@@ -81,7 +80,7 @@ export default {
 
 @media (min-width: 923px) {
   .about {
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 }
 </style>
