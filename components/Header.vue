@@ -157,4 +157,55 @@ nav ul {
   font-size: var(--fz-heading);
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .nav-container {
+    transform: translateX(0);
+  }
+  .nav__hamburger {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+  }
+  nav ul {
+    position: relative;
+    width: 40%;
+    height: inherit;
+    z-index: var(--high);
+    background-color: inherit;
+    color: white;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__link {
+    width: auto;
+    height: auto;
+    padding-right: 30px;
+    margin-bottom: 0px;
+
+    color: var(--blue-purple);
+  }
+  .nav__link:hover {
+    color: var(--white);
+  }
+  .nav__link:nth-child(6):hover {
+    background-color: var(--white);
+    color: var(--purple);
+  }
+  .nav__link:nth-child(6) {
+    width: 100%;
+    border: 1px solid var(--white);
+    color: white;
+  }
+  .fa-times {
+    display: none !important;
+  }
+  .nav-container .contact__content {
+    display: none;
+  }
+}
 </style>

@@ -81,7 +81,7 @@ export default {
 .intro__content h1 {
   font-weight: var(--extra-bold);
   font-size: clamp(40px, 8vw, 80px);
-  display: flex;
+  /* display: flex; */
 }
 
 .intro__content h1 span {
@@ -185,6 +185,29 @@ export default {
   }
   to {
     transform: translateY(20px);
+  }
+}
+
+@media (min-width: 480px) {
+  .intro__content p {
+    font-size: var(--fz-xl);
+  }
+}
+@media (min-width: 923px) {
+  .intro__content h2 {
+    font-size: 5rem;
+  }
+  .intro__content h1 {
+    font-size: 6rem;
+  }
+  .intro__content h3 {
+    font-size: 6.5rem;
+  }
+  .intro__content p {
+    font-size: 2.2rem;
+  }
+  .intro__content p {
+    max-width: 800px;
   }
 }
 </style>

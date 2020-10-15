@@ -192,4 +192,10 @@ export default {
   margin-right: 4px;
   font-size: var(--fs-p-smallest);
 }
+
+@media (min-width: 480px) {
+  .experiences__missions {
+    font-size: var(--fz-lg);
+  }
+}
 </style>

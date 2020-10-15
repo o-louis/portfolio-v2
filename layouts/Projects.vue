@@ -242,4 +242,26 @@ export default {
 .projects__description span > a:nth-child(3) {
   margin-right: 0px;
 }
+
+@media (min-width: 480px) {
+  .projects__grid {
+    grid-auto-rows: auto;
+  }
+}
+@media (min-width: 616px) {
+  .projects__description h4 {
+    font-size: 2rem;
+  }
+  .projects__description p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 923px) {
+  .projects {
+    min-height: 100vh;
+  }
+  .projects__grid {
+    grid-auto-rows: minmax(190px, 120px);
+  }
+}
 </style>

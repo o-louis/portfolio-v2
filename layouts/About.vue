@@ -71,4 +71,17 @@ export default {
   font-size: var(--fs-p-small);
   text-align: center;
 }
+
+@media (min-width: 480px) {
+  .about__content p {
+    font-weight: var(--medium);
+    font-size: var(--fz-xl);
+  }
+}
+
+@media (min-width: 923px) {
+  .about {
+    min-height: 100vh;
+  }
+}
 </style>

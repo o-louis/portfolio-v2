@@ -89,4 +89,13 @@ export default {
   padding: 5px;
   font-size: var(--fz-md);
 }
+
+@media (min-width: 480px) {
+  .skills__grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .skills__item {
+    font-size: var(--fz-lg);
+  }
+}
 </style>
