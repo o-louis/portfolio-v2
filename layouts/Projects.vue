@@ -48,14 +48,14 @@
 </template>
 
 <script>
-import starzplay from '../static/starzplay.png'
-import arte from '../static/arte.png'
-import mernblog from '../static/mernblog.png'
-import chatapp from '../static/chatapp.png'
-import covidtracker from '../static/covidtracker.png'
-import authentication from '../static/authentication.png'
-import moovee from '../static/moovee.png'
-import hackernews from '../static/hackernews.png'
+import starzplay from '../static/starzplay.webp'
+import arte from '../static/arte.webp'
+import mernblog from '../static/mernblog.webp'
+import chatapp from '../static/chatapp.webp'
+import covidtracker from '../static/covidtracker.webp'
+import authentication from '../static/authentication.webp'
+import moovee from '../static/moovee.webp'
+import hackernews from '../static/hackernews.webp'
 
 export default {
   name: 'Projects',
