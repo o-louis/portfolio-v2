@@ -3,8 +3,7 @@
     <div class="intro__content">
       <h2>{{ h2 }}</h2>
       <h1>
-        Oriane Louis
-        <!-- <span v-for="(letter, index) in name" :key="index">{{ letter }}</span> -->
+        <span v-for="(letter, index) in name" :key="index">{{ letter }}</span>
       </h1>
       <h3>{{ h3 }}<span>.</span></h3>
       <p>{{ description }}</p>
@@ -27,32 +26,29 @@ export default {
     description:
       'I love Javascript and its frameworks to build things and improve User Experience.',
   }),
-  beforeMount() {
+  mounted() {
     const letterSpans = document.querySelectorAll('.intro__content h1 > span')
-    // const subtitleElement = document.querySelector('.intro__content  h3')
-    // const pElement = document.querySelector('.intro__content  p')
-    // const iElement = document.querySelector(
-    //   '.intro__content  .intro__chevron-down'
-    // )
+    const subtitleElement = document.querySelector('.intro__content  h3')
+    const pElement = document.querySelector('.intro__content  p')
+    const iElement = document.querySelector(
+      '.intro__content  .intro__chevron-down'
+    )
 
-    // let index = 0
-    // let timer = setInterval(() => {
-    for (let index = 0; index < letterSpans.length; index++) {
-      console.log(index)
-      letterSpans[index].className = 'fade'
+    let index = 0
+    let timer = setInterval(() => {
+      letterSpans[index++].className = 'fade'
+      stopTimer()
+    }, 80)
+
+    const stopTimer = () => {
+      if (index === letterSpans.length) {
+        subtitleElement.className = 'downToUp'
+        pElement.className = 'downToUp'
+        iElement.className += ' downToUp'
+        clearInterval(timer)
+        timer = null
+      }
     }
-    // stopTimer()
-    // }, 40)
-
-    // const stopTimer = () => {
-    //   if (index === letterSpans.length) {
-    //     subtitleElement.className = 'downToUp'
-    //     pElement.className = 'downToUp'
-    //     iElement.className += ' downToUp'
-    //     clearInterval(timer)
-    //     timer = null
-    //   }
-    // }
   },
 }
 </script>
@@ -91,7 +87,7 @@ export default {
 .intro__content h1 span {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .intro__content h2 {
@@ -111,22 +107,22 @@ export default {
 }
 
 .intro__content h3 {
-  /* transform: translateY(40px);
-  opacity: 1;
-  transition: all 0.7s ease-in-out; */
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
 }
 
 .intro__content p {
-  /* opacity: 1;
+  opacity: 0;
   transform: translateY(40px);
   transition: all 0.5s ease-in-out;
-  transition-delay: 0.7s; */
+  transition-delay: 0.7s;
 }
 
 .intro__content .intro__chevron-down {
-  /* opacity: 1;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
-  transition-delay: 1.2s; */
+  transition-delay: 1.2s;
 }
 
 /* Animation */
