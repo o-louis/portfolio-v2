@@ -1,10 +1,10 @@
 <template>
   <section class="intro">
     <div class="intro__content">
-      <h2>{{ h2 }}</h2>
+      <p class="title_content">{{ h2 }}</p>
       <h1>{{ name }}</h1>
-      <h3>{{ h3 }}<span>.</span></h3>
-      <p>{{ description }}</p>
+      <h2>{{ h3 }}<span>.</span></h2>
+      <p class="desc_content">{{ description }}</p>
       <div class="intro__chevron-down">
         <a href="#about">
           <font-awesome-icon :icon="['fas', 'chevron-down']" />
@@ -57,12 +57,12 @@ export default {
   font-size: clamp(40px, 8vw, 80px);
 }
 
-.intro__content h2 {
+.intro__content .title_content {
   font-weight: var(--regular);
   font-size: clamp(var(--fz-xl), 5vw, var(--fz-xxl));
 }
 
-.intro__content h3 {
+.intro__content h2 {
   margin-top: 40px;
   color: var(--blue-purple);
   font-weight: var(--extra-bold);
@@ -73,7 +73,7 @@ export default {
   color: var(--white);
 }
 
-.intro__content p {
+.intro__content .desc_content {
   margin-top: 20px;
   line-height: var(--lh);
   font-size: var(--fs-p-normal);
@@ -102,24 +102,24 @@ export default {
 }
 
 @media (min-width: 480px) {
-  .intro__content p {
+  .intro__content .desc_content {
     font-size: var(--fz-xl);
   }
 }
 @media (min-width: 923px) {
-  .intro__content h2 {
+  .intro__content .title_content {
     font-size: 5rem;
   }
   .intro__content h1 {
     font-size: 6rem;
   }
-  .intro__content h3 {
+  .intro__content h2 {
     font-size: 6.5rem;
   }
-  .intro__content p {
+  .intro__content .desc_content {
     font-size: 2.2rem;
   }
-  .intro__content p {
+  .intro__content .desc_content {
     max-width: 800px;
   }
 }

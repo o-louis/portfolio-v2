@@ -39,6 +39,8 @@ export default {
           rel: 'stylesheet',
           href:
             'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap',
+          async: 'true',
+          defer: 'true',
         },
       ],
     }
