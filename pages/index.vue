@@ -36,8 +36,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
 :root {
   /* color */
   --background: #1d164c;

@@ -17,8 +17,8 @@
             />
           </div>
           <div class="projects__description">
-            <h4>{{ project.title }}</h4>
-            <p>
+            <p class="title">{{ project.title }}</p>
+            <p class="infos">
               {{ project.desc }}
               <br />
               <strong>{{ project.languages }}</strong>
@@ -229,12 +229,12 @@ export default {
   transform: translateY(0);
 }
 
-.projects__description h4 {
+.projects__description .title {
   font-size: var(--fs-h4);
   margin-bottom: 5px;
 }
 
-.projects__description p {
+.projects__description .infos {
   font-size: var(--fs-p-desc);
   line-height: var(--lh);
 }
@@ -270,10 +270,10 @@ export default {
   }
 }
 @media (min-width: 616px) {
-  .projects__description h4 {
+  .projects__description .title {
     font-size: 2rem;
   }
-  .projects__description p {
+  .projects__description .infos {
     font-size: 1.3rem;
   }
 }
