@@ -28,27 +28,30 @@ export default {
   }),
   mounted() {
     const letterSpans = document.querySelectorAll('.intro__content h1 > span')
-    const subtitleElement = document.querySelector('.intro__content  h3')
-    const pElement = document.querySelector('.intro__content  p')
-    const iElement = document.querySelector(
-      '.intro__content  .intro__chevron-down'
-    )
+    // const subtitleElement = document.querySelector('.intro__content  h3')
+    // const pElement = document.querySelector('.intro__content  p')
+    // const iElement = document.querySelector(
+    //   '.intro__content  .intro__chevron-down'
+    // )
 
-    let index = 0
-    let timer = setInterval(() => {
-      letterSpans[index++].className = 'fade'
-      stopTimer()
-    }, 40)
-
-    const stopTimer = () => {
-      if (index === letterSpans.length) {
-        subtitleElement.className = 'downToUp'
-        pElement.className = 'downToUp'
-        iElement.className += ' downToUp'
-        clearInterval(timer)
-        timer = null
-      }
+    // let index = 0
+    // let timer = setInterval(() => {
+    for (let index = 0; index < letterSpans.length; index++) {
+      console.log(index)
+      letterSpans[index].className = 'fade'
     }
+    // stopTimer()
+    // }, 40)
+
+    // const stopTimer = () => {
+    //   if (index === letterSpans.length) {
+    //     subtitleElement.className = 'downToUp'
+    //     pElement.className = 'downToUp'
+    //     iElement.className += ' downToUp'
+    //     clearInterval(timer)
+    //     timer = null
+    //   }
+    // }
   },
 }
 </script>
@@ -108,19 +111,19 @@ export default {
 
 .intro__content h3 {
   transform: translateY(40px);
-  opacity: 0;
+  opacity: 1;
   transition: all 0.7s ease-in-out;
 }
 
 .intro__content p {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(40px);
   transition: all 0.5s ease-in-out;
   transition-delay: 0.7s;
 }
 
 .intro__content .intro__chevron-down {
-  opacity: 0;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
   transition-delay: 1.2s;
 }
