@@ -11,7 +11,8 @@
           <div class="projects__image">
             <img
               v-lazy-load
-              :src="project.img"
+              :data-src="project.img"
+              :title="project.alt"
               :alt="project.alt"
               width="300"
               height="190"
