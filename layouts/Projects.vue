@@ -9,7 +9,12 @@
           class="projects__item"
         >
           <div class="projects__image">
-            <img :src="project.img" :alt="project.alt" />
+            <img
+              :src="project.img"
+              :alt="project.alt"
+              width="300"
+              height="190"
+            />
           </div>
           <div class="projects__description">
             <h4>{{ project.title }}</h4>
