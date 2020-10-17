@@ -24,16 +24,6 @@ export default {
     description:
       'I love Javascript and its frameworks to build things and improve User Experience.',
   }),
-  // beforeMount() {
-  //   const h3 = document.querySelector('.intro__content h3')
-  //   const p = document.querySelector('.intro__content p')
-  //   const chevron = document.querySelector(
-  //     '.intro__content .intro__chevron-down'
-  //   )
-  //   h3.classList.add('downToUp')
-  //   p.classList.add('downToUp')
-  //   chevron.classList.add('downToUp')
-  // },
 }
 </script>
 
@@ -77,8 +67,6 @@ export default {
   color: var(--blue-purple);
   font-weight: var(--extra-bold);
   font-size: clamp(40px, 8vw, 80px);
-
-  transition-delay: 0.2s;
 }
 
 .intro__content h3 span {
@@ -90,13 +78,9 @@ export default {
   line-height: var(--lh);
   font-size: var(--fs-p-normal);
   color: var(--white);
-
-  transition-delay: 0.4s;
 }
 
 .intro__content .intro__chevron-down {
-  transition-delay: 0.6s;
-
   align-self: center;
   font-size: var(--fs-h3);
   color: var(--blue-purple);
@@ -106,21 +90,6 @@ export default {
   animation-name: bounce;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-.intro__content h3,
-.intro__content p,
-.intro__content .intro__chevron-down {
-  opacity: 1;
-  /* transition-property: opacity;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out; */
-}
-
-.intro__content h3.downToUp,
-.intro__content p.downToUp,
-.intro__content .intro__chevron-down.downToUp {
-  opacity: 1;
 }
 
 @keyframes bounce {
