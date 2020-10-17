@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style defer>
 .intro {
   width: 100%;
   position: relative;

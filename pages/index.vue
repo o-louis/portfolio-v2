@@ -36,10 +36,9 @@ export default {
     return {
       link: [
         {
-          rel: 'preload',
+          rel: 'stylesheet',
           href:
             'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap',
-          async: 'true',
           defer: 'true',
         },
       ],
@@ -48,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style defer>
 :root {
   /* color */
   --background: #1d164c;

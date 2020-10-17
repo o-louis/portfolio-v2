@@ -106,7 +106,7 @@ export default {
 }
 </script>
 
-<style>
+<style defer>
 .about__content h2 {
   font-weight: var(--bold);
   margin-top: 60px;

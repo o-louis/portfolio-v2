@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style defer>
 /* For the navigation place */
 .nav-wrapper .contact {
   padding-top: 0;

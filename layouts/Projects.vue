@@ -162,7 +162,7 @@ export default {
 }
 </script>
 
-<style>
+<style defer>
 .projects {
   margin-top: 10px;
   padding-bottom: 20px;
