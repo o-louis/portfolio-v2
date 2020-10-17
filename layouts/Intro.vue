@@ -38,7 +38,7 @@ export default {
     let timer = setInterval(() => {
       letterSpans[index++].className = 'fade'
       stopTimer()
-    }, 80)
+    }, 40)
 
     const stopTimer = () => {
       if (index === letterSpans.length) {
@@ -87,7 +87,7 @@ export default {
 .intro__content h1 span {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .intro__content h2 {
