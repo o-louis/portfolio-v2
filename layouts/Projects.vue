@@ -10,6 +10,7 @@
         >
           <div class="projects__image">
             <img
+              v-lazy-load
               :src="project.img"
               :alt="project.alt"
               width="300"
