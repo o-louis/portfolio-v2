@@ -38,7 +38,7 @@ export default {
     let timer = setInterval(() => {
       letterSpans[index++].className = 'fade'
       stopTimer()
-    }, 80)
+    }, 10)
 
     const stopTimer = () => {
       if (index === letterSpans.length) {
