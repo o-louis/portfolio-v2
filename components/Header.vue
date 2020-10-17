@@ -18,9 +18,8 @@
               section.name
             }}</a>
           </li>
-
-          <Contact :is-in-header="true" />
         </ul>
+        <Contact :is-in-header="true" />
       </div>
     </nav>
   </header>
@@ -223,7 +222,7 @@ nav {
   .fa-times {
     display: none !important;
   }
-  .nav-container .contact__content {
+  .nav-wrapper .contact__content {
     display: none;
   }
 }

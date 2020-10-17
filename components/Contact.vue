@@ -49,18 +49,17 @@ export default {
 
 <style>
 /* For the navigation place */
-.nav-container .contact {
+.nav-wrapper .contact {
   padding-top: 0;
   color: var(--purple);
 }
-.nav-container .contact__social {
+.nav-wrapper .contact__social {
   text-align: center;
 }
-.nav-container .contact__content {
+.nav-wrapper .contact__content {
   margin-top: 50px;
 }
-
-.nav-container .contact__networks {
+.nav-wrapper .contact__networks {
   font-size: 30px;
 }
 
