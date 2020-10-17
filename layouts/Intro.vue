@@ -25,16 +25,11 @@ export default {
       'I love Javascript and its frameworks to build things and improve User Experience.',
   }),
   mounted() {
-    const h1 = document.querySelector('.intro__content h1')
-    const h2 = document.querySelector('.intro__content h2')
     const h3 = document.querySelector('.intro__content h3')
     const p = document.querySelector('.intro__content p')
     const chevron = document.querySelector(
       '.intro__content .intro__chevron-down'
     )
-
-    h1.classList.add('downToUp')
-    h2.classList.add('downToUp')
     h3.classList.add('downToUp')
     p.classList.add('downToUp')
     chevron.classList.add('downToUp')
@@ -70,15 +65,11 @@ export default {
 .intro__content h1 {
   font-weight: var(--extra-bold);
   font-size: clamp(40px, 8vw, 80px);
-
-  transition-delay: 0.2s;
 }
 
 .intro__content h2 {
   font-weight: var(--regular);
   font-size: clamp(var(--fz-xl), 5vw, var(--fz-xxl));
-
-  transition-delay: 0.2s;
 }
 
 .intro__content h3 {
@@ -87,7 +78,7 @@ export default {
   font-weight: var(--extra-bold);
   font-size: clamp(40px, 8vw, 80px);
 
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 .intro__content h3 span {
@@ -100,25 +91,23 @@ export default {
   font-size: var(--fs-p-normal);
   color: var(--white);
 
-  transition-delay: 0.6s;
+  transition-delay: 0.4s;
 }
 
 .intro__content .intro__chevron-down {
-  transition-delay: 0.8s;
+  transition-delay: 0.6s;
 
   align-self: center;
   font-size: var(--fs-h3);
   color: var(--blue-purple);
   margin-top: 10vh;
 
-  animation-duration: 0.6s;
+  animation-duration: 0.8s;
   animation-name: bounce;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-.intro__content h1,
-.intro__content h2,
 .intro__content h3,
 .intro__content p,
 .intro__content .intro__chevron-down {
@@ -128,8 +117,6 @@ export default {
   transition-timing-function: ease-in-out;
 }
 
-.intro__content h1.downToUp,
-.intro__content h2.downToUp,
 .intro__content h3.downToUp,
 .intro__content p.downToUp,
 .intro__content .intro__chevron-down.downToUp {
