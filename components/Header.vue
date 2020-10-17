@@ -18,7 +18,7 @@
           }}</a>
         </li>
 
-        <Contact />
+        <Contact :is-in-header="true" />
       </ul>
     </nav>
   </header>

@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="contact">
+  <section :id="isInHeader ? null : 'contact'" class="contact">
     <div class="contact__content">
       <div class="contact__social">
         <div class="contact__networks">
@@ -20,6 +20,9 @@
 <script>
 export default {
   name: 'Contact',
+  props: {
+    isInHeader: Boolean,
+  },
   data: () => ({
     contacts: [
       {
