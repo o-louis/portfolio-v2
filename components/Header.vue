@@ -10,16 +10,18 @@
         <div class="nav_hamburger-line"></div>
       </div>
 
-      <ul :class="{ 'nav-container': true, open: isNavOpen }">
+      <div :class="{ 'nav-wrapper': true, open: isNavOpen }">
         <font-awesome-icon :icon="['fa', 'times']" @click="toggleNav" />
-        <li v-for="(section, index) in nav" :key="index" class="nav__link">
-          <a :href="section.path" :target="section.target">{{
-            section.name
-          }}</a>
-        </li>
+        <ul class="nav-container">
+          <li v-for="(section, index) in nav" :key="index" class="nav__link">
+            <a :href="section.path" :target="section.target">{{
+              section.name
+            }}</a>
+          </li>
 
-        <Contact :is-in-header="true" />
-      </ul>
+          <Contact :is-in-header="true" />
+        </ul>
+      </div>
     </nav>
   </header>
 </template>
@@ -116,7 +118,7 @@ nav {
   width: 60%;
 }
 
-nav ul {
+.nav-wrapper {
   position: fixed;
   right: 0;
   top: 0;
@@ -125,15 +127,13 @@ nav ul {
   z-index: var(--high);
   background-color: white;
   padding: 30px;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+
   color: var(--purple);
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.nav-container {
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
 }
 
 .nav__link {
@@ -147,7 +147,7 @@ nav ul {
 }
 
 /* Resume btn */
-.nav__link:nth-child(6) {
+.nav__link:nth-child(5) {
   padding-right: 0px;
   border: 1px solid var(--blue-purple);
   padding: 5px 5px;
@@ -156,7 +156,7 @@ nav ul {
   color: var(--purple);
 }
 
-.nav__link:nth-child(6):hover {
+.nav__link:nth-child(5):hover {
   background-color: var(--white);
   color: var(--blue-purple);
 }
@@ -175,16 +175,23 @@ nav ul {
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .nav-container {
-    transform: translateX(0);
-  }
   .nav__hamburger {
     display: none;
+  }
+  .nav-wrapper {
+    display: flex;
+    transform: translateX(0);
   }
   .nav-container {
     display: flex;
   }
   nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-wrapper {
     position: relative;
     width: 40%;
     height: inherit;
@@ -192,11 +199,6 @@ nav ul {
     background-color: inherit;
     color: white;
     padding: 0px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
   }
   .nav__link {
     width: auto;
@@ -209,11 +211,11 @@ nav ul {
   .nav__link:hover {
     color: var(--white);
   }
-  .nav__link:nth-child(6):hover {
+  .nav__link:nth-child(5):hover {
     background-color: var(--white);
     color: var(--purple);
   }
-  .nav__link:nth-child(6) {
+  .nav__link:nth-child(5) {
     width: 100%;
     border: 1px solid var(--white);
     color: white;

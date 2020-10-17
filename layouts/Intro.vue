@@ -6,7 +6,7 @@
       <h2>{{ h3 }}<span>.</span></h2>
       <p class="desc_content">{{ description }}</p>
       <div class="intro__chevron-down">
-        <a href="#about">
+        <a href="#about" aria-label="Section about me">
           <font-awesome-icon :icon="['fas', 'chevron-down']" />
         </a>
       </div>

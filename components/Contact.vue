@@ -8,6 +8,7 @@
             :key="index"
             :href="link.path"
             target="__blank"
+            :aria-label="link.icon.name"
           >
             <font-awesome-icon :icon="[link.icon.prefix, link.icon.name]"
           /></a>
