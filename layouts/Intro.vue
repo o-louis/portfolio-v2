@@ -24,16 +24,16 @@ export default {
     description:
       'I love Javascript and its frameworks to build things and improve User Experience.',
   }),
-  beforeMount() {
-    const h3 = document.querySelector('.intro__content h3')
-    const p = document.querySelector('.intro__content p')
-    const chevron = document.querySelector(
-      '.intro__content .intro__chevron-down'
-    )
-    h3.classList.add('downToUp')
-    p.classList.add('downToUp')
-    chevron.classList.add('downToUp')
-  },
+  // beforeMount() {
+  //   const h3 = document.querySelector('.intro__content h3')
+  //   const p = document.querySelector('.intro__content p')
+  //   const chevron = document.querySelector(
+  //     '.intro__content .intro__chevron-down'
+  //   )
+  //   h3.classList.add('downToUp')
+  //   p.classList.add('downToUp')
+  //   chevron.classList.add('downToUp')
+  // },
 }
 </script>
 
@@ -111,10 +111,10 @@ export default {
 .intro__content h3,
 .intro__content p,
 .intro__content .intro__chevron-down {
-  opacity: 0;
-  transition-property: opacity;
+  opacity: 1;
+  /* transition-property: opacity;
   transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
 }
 
 .intro__content h3.downToUp,
