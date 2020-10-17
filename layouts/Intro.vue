@@ -3,7 +3,8 @@
     <div class="intro__content">
       <h2>{{ h2 }}</h2>
       <h1>
-        <span v-for="(letter, index) in name" :key="index">{{ letter }}</span>
+        Oriane Louis
+        <!-- <span v-for="(letter, index) in name" :key="index">{{ letter }}</span> -->
       </h1>
       <h3>{{ h3 }}<span>.</span></h3>
       <p>{{ description }}</p>
@@ -26,7 +27,7 @@ export default {
     description:
       'I love Javascript and its frameworks to build things and improve User Experience.',
   }),
-  mounted() {
+  beforeMount() {
     const letterSpans = document.querySelectorAll('.intro__content h1 > span')
     // const subtitleElement = document.querySelector('.intro__content  h3')
     // const pElement = document.querySelector('.intro__content  p')
@@ -110,22 +111,22 @@ export default {
 }
 
 .intro__content h3 {
-  transform: translateY(40px);
+  /* transform: translateY(40px);
   opacity: 1;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out; */
 }
 
 .intro__content p {
-  opacity: 1;
+  /* opacity: 1;
   transform: translateY(40px);
   transition: all 0.5s ease-in-out;
-  transition-delay: 0.7s;
+  transition-delay: 0.7s; */
 }
 
 .intro__content .intro__chevron-down {
-  opacity: 1;
+  /* opacity: 1;
   transition: all 0.3s ease-in-out;
-  transition-delay: 1.2s;
+  transition-delay: 1.2s; */
 }
 
 /* Animation */
