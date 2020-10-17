@@ -111,7 +111,7 @@ export default {
   font-weight: var(--bold);
   margin-top: 60px;
   margin-bottom: 20px;
-  color: var(--purple);
+  color: var(--blue-purple);
   font-size: clamp(20px, 5vw, 2.5rem);
 }
 
@@ -167,7 +167,7 @@ export default {
 
 .experiences__role strong {
   font-weight: var(--extra-bold);
-  color: var(--purple);
+  color: var(--light-green);
 }
 
 .experiences__duration {

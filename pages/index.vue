@@ -32,12 +32,21 @@ export default {
     Contact,
     Footer,
   },
+  head() {
+    return {
+      link: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap',
+        },
+      ],
+    }
+  },
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
 :root {
   /* color */
   --background: #1d164c;
@@ -46,6 +55,7 @@ export default {
   --lightest-grey: #dcd6d62f;
   --purple: #4831d4;
   --blue-purple: #a09be7;
+  --light-green: #ccf381;
 
   /* font-sizes */
   --fs-vw: 0rem;
