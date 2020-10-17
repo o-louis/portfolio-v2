@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style defer>
+<style>
 .skills {
   color: var(--white);
 }

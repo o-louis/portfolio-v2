@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style defer>
+<style>
 header {
   width: 100%;
   padding: 14px 0;

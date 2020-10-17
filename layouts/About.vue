@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style defer>
+<style>
 .about {
   width: 100%;
   position: relative;

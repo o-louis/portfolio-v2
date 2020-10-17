@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style defer>
+<style>
 footer {
   display: flex;
   justify-content: center;

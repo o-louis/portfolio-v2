@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style defer>
+<style>
 :root {
   /* color */
   --background: #1d164c;
