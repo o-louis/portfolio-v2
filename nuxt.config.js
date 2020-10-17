@@ -7,11 +7,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Oriane Louis. Developer. Portfolio built with NuxtJS' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }, {
-      rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap",
-    },],
-    html: [{ lang: 'en' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
