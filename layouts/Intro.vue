@@ -24,7 +24,7 @@ export default {
     description:
       'I love Javascript and its frameworks to build things and improve User Experience.',
   }),
-  mounted() {
+  beforeMount() {
     const h3 = document.querySelector('.intro__content h3')
     const p = document.querySelector('.intro__content p')
     const chevron = document.querySelector(
